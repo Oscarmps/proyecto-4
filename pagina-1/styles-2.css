@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: o;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body {
+    font-family: "public sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+   background-image: url("imagenes-13/fondo.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover; 
+ background-attachment: fixed;
+}
+.header {
+    grid-area: header;
+    background-color:rgb(32, 186, 228);
+    color: white;
+    border: auto;
+    margin: auto;
+    padding: auto;
+#columnas1 {
+    column-count: 3;
+    column-gap: 0px;
+    column-rule: none gba(49,60,63);
+    list-style: none;
+    text-align: right;
+}
+}
+.main { 
+    grid-area: main;
+    color:rgb(1, 2, 1);
+    border: auto;
+    margin: auto;
+    padding: auto;
+.search{
+    background-color:white;
+    padding: 30px;
+font-size: 20px;
+border: 1px solid black;
+border-radius: 40px;
+width: 200px;
+}
+
+.search3{
+    color: white;
+    background-color:rgb(14, 12, 12);
+    padding: 30px;
+font-size: 20px;
+border: 1px solid black;
+border-radius: 40px;
+width: 200px;
+}
+
+
+.grid-conteiner > * {
+    box-shadow: -1px 1px 7px 0px rgba(37, 23, 187, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;   
+}
+
+.grid-conteiner {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    
+}
+ @media (min-width: 600px) {
+    .grid-conteiner {
+        grid-template: 
+        "header  header" 100px
+        "navbar  navbar" 50px
+        "sidebar main" auto
+ 
+    }
+ }
+  @media (min-width: 900px) {
+    .grid-conteiner {
+        grid-template: 
+        "header  header header" 60px
+        "navbar  main sidebar" 100px/ 200px 500PX;
+    } 
+ }
